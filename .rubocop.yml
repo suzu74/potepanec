@@ -1,7 +1,7 @@
 Style/Tab:
   Enabled: false
-Layout/IndentationWidth:
-  Enabled: false
+# Layout/IndentationWidth:
+#   Enabled: false
 
 AllCops:
   Exclude:
