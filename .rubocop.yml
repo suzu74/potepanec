@@ -1,7 +1,5 @@
-Style/Tab:
-  Enabled: false
-# Layout/IndentationWidth:
-#   Enabled: false
+inherit_from:
+ - .rubocop_airbnb.yml
 
 AllCops:
   Exclude:
@@ -11,6 +9,7 @@ AllCops:
     - 'config/application.rb'
     - 'config/initializers/*'
     - 'config/spring.rb'
+    - 'config/**/*'
     - 'lib/tasks/*'
     - 'vendor/**/*'
     - 'path/ruby'
