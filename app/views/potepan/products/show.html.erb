@@ -14,7 +14,9 @@
           <li>
             <a href="/potepan/index.html">Home</a>
           </li>
-          <li class="active"><%= @product.name %></li>
+          <li class="active">
+            <%= @product.name %>
+          </li>
         </ol>
       </div>
     </div>
@@ -40,11 +42,11 @@
             <div class="clearfix">
               <div id="thumbcarousel" class="carousel slide" data-interval="false">
                 <div class="carousel-inner">
-                    <% @product.images.each_with_index do |image, i| %>
-                      <div data-target="#carousel" data-slide-to="<% i %>" class="thumb">
-                        <%= image_tag image.attachment(:large) %>
-                      </div>
-                    <% end  %>
+                  <% @product.images.each_with_index do |image, i| %>
+                    <div data-target="#carousel" data-slide-to="<% i %>" class="thumb">
+                      <%= image_tag image.attachment(:large) %>
+                    </div>
+                  <% end  %>
                 </div>
                 <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
                   <span class="glyphicon glyphicon-chevron-left"></span>
@@ -148,8 +150,8 @@
             <%= image_tag("img/products/products-03.jpg", :alt => "products-img") %>
           </div>
           <div class="productCaption clearfix">
-           <h5>Scarf Ring Corner</h5>
-           <h3>179円</h3>
+            <h5>Scarf Ring Corner</h5>
+            <h3>179円</h3>
           </div>
         </div>
       </div>
@@ -159,8 +161,8 @@
             <%= image_tag("img/products/products-04.jpg", :alt => "products-img") %>
           </div>
           <div class="productCaption clearfix">
-           <h5>Sun Buddies</h5>
-           <h3>149円</h3>
+            <h5>Sun Buddies</h5>
+            <h3>149円</h3>
           </div>
         </div>
       </div>
