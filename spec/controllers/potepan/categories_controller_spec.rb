@@ -1,12 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Potepan::CategoriesController, type: :controller do
-
   describe "GET #show" do
-    it "returns http success" do
-      get :show
-      expect(response).to have_http_status(:success)
+    it "レスポンスに成功" do
+      expect(response).to be_successful
     end
   end
-
 end
