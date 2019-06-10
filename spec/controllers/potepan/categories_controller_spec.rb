@@ -2,9 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Potepan::CategoriesController, type: :controller do
   describe "GET #show" do
-    let(:taxon)    { create(:taxon, taxonomy: taxonomy) }
-    let(:taxonomy) { create(:taxonomy) }
-    let(:product)  { create(:product, taxons: [taxon]) }
+    let(:taxon)         { create(:taxon, taxonomy: taxonomy) }
+    let(:taxonomy)      { create(:taxonomy) }
+    let(:product)       { create(:product, taxons: [taxon]) }
+    let(:other_product) { create(:product) }
 
     before do
       get :show, params: { id: taxon.id }
@@ -28,6 +29,10 @@ RSpec.describe Potepan::CategoriesController, type: :controller do
 
     it "正しい@productsが渡されているか" do
       expect(assigns(:products)).to match_array(product)
+    end
+
+    it "正しくない@productsが渡されていないか" do
+      expect(assigns(:products)).not_to match_array(other_product)
     end
   end
 end
