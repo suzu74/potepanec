@@ -11,7 +11,7 @@
           <%= image_tag related_product.display_image.attachment(:product) %>
         </div>
         <div class="productCaption clearfix">
-         <h5><%= related_product.name %></h5>
+         <h5><%= link_to related_product.name, potepan_product_path(related_product.id) %></h5>
          <h3><%= related_product.display_price %></h3>
         </div>
       </div>
