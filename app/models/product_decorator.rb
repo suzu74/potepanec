@@ -1,5 +1,6 @@
-Spree::Product.class_eval do
-  scope :related_products, -> (product) do
-    in_taxons(product.taxons).includes(master: [:default_price, :images]).where.not(id: product.id).distinct
+module Spree::ProductDecorator
+  def related_products
+    Spree::Product.in_taxons(taxons).where.not(id: id).distinct
   end
+  Spree::Product.prepend self
 end
